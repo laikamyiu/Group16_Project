@@ -27,3 +27,69 @@ The backup.sh script takes two variables. The first variable will be the target 
 
 How to run each script:
 To run the script, we will have to be in the directory the script is in, use the command sudo bash backup.sh {path of directory you would like to take a backup} {path of where you would like the backup to be}. After hitting enter, you are done. To double check we would then go into the directory of the backup and see that the file is there.
+
+
+
+SCRIPT 3 (Log Monitoring and Script Health):
+
+
+Description of Each Script
+
+
+monitor.sh
+
+This script monitors system logs and system health on an Ubuntu Server system. It checks the system log file (/var/log/syslog) and searches for the keywords "failed" and "error" using the grep command. The matching log entries are written into a report file named monitor_report.txt.
+
+The script also checks disk usage using the df command. If the disk usage is above 20%, it generates a warning message. Otherwise, it reports that disk usage is normal.
+
+In addition, the script checks CPU usage using the top command. If CPU usage is above 70%, it generates a warning message. Otherwise, it reports that CPU usage is normal.
+
+All results, including log entries, disk usage status, and CPU usage status, are saved into the report file.
+
+
+
+How to Run the Script
+
+
+1. Open terminal and navigate to the directory containing the script.
+
+2. Make the script executable:
+   chmod +x monitor.sh
+
+3. Run the script:
+   ./monitor.sh
+
+4. View the output:
+   cat monitor_report.txt
+
+----------------------------------------
+Dependencies
+----------------------------------------
+
+This script uses standard Linux commands:
+- grep
+- df
+- awk
+- sed
+- top
+
+No additional installations are required on Ubuntu Server.
+
+----------------------------------------
+Sample Output
+----------------------------------------
+
+System Monitoring Report
+Date: Mon Apr 14 ...
+
+Log Errors and Failed Attempts:
+... (log entries) ...
+
+Disk Usage Check:
+Disk usage is normal (16%)
+
+CPU Usage Check:
+CPU usage is normal (5%)
+
+End of report
+
