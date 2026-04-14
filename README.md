@@ -62,9 +62,9 @@ How to Run the Script
 4. View the output:
    cat monitor_report.txt
 
-----------------------------------------
+
 Dependencies
-----------------------------------------
+
 
 This script uses standard Linux commands:
 - grep
@@ -75,9 +75,9 @@ This script uses standard Linux commands:
 
 No additional installations are required on Ubuntu Server.
 
-----------------------------------------
+
 Sample Output
-----------------------------------------
+
 
 System Monitoring Report
 Date: Mon Apr 14 ...
