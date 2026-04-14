@@ -28,6 +28,28 @@ The backup.sh script takes two variables. The first variable will be the target 
 How to run each script:
 To run the script, we will have to be in the directory the script is in, use the command sudo bash backup.sh {path of directory you would like to take a backup} {path of where you would like the backup to be}. After hitting enter, you are done. To double check we would then go into the directory of the backup and see that the file is there.
 
+Sample outputs (copy-paste from terminal)
+
+kamyiusa@kamyiusa:"/proj1$ sudo bash backup.sh /var/log/ /home/kamyiusa/proj1/backup tar: Removing leading ` from member names
+kamyiusa@kamyiusa: "/proj1$ ls backup backup.sh
+kamyiusa@kamyiusa:"/proj1$ cd backup kamyiusa@kamyiusa:"/proj1/backup$ ls
+logs-20260413.tar.gz logs-20260414.tar.gz
+kamyiusa@kamyiusa:"/proj1/backup$
+
+kamyiusa@kamyiusa:~/proj1$ sudo bash backup.sh /home/kamyiusa/proj1 /home/kamyiusa/proj1/backup1 tar: Removing leading '/' from member names
+kamyiusa@kamyiusa:"/proj1$ ls
+backup backup1 backup.sh
+kamyiusa@kamyiusa:~/proj1$ cd backup1
+kamyiusa@kamyiusa:"/proj1/backup1$ ls
+
+kamyiusa@kamyiusa:"/proj1/backup1$ cd
+kamyiusa@kamyiusa: "/proj1$ sudo bash backup.sh /home/kamyiusa/hw1 /home/kamyiusa/proj1/backuphw1 tar: Removing leading from member names kamyiusa@kamyiusa:"/proj1$ cd backuphw1/ kamyiusa@kamyiusa:"/proj1/backuphw1$ ls
+logs-20260414.tar.gz
+kamyiusa@kamyiusa:"/proj1/backuphw1$ cd ..
+kamyiusa@kamyiusa:~/proj1$ sudo bash backup.sh /home/kamyiusa/hw2 /home/kamyiusa/proj1/backuphw2 tar: Removing leading `/' from member names kamyiusa@kamyiusa:"/proj1$ cd backuphw2/
+kamyiusa@kamyiusa:"/proj1/backuphu2$ ls
+logs-20260414.tar.gz
+kamyiusa@kamyiusa:"/proj1/backuphw2$
 
 
 SCRIPT 3 (Log Monitoring and Script Health):
