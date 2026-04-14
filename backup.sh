@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-TARGET="/var/log/"
-BACKUP="/home/kamyiusa/proj1/backup"
+TARGET=$1
+BACKUP=$2
 DATE=$(date +%Y%m%d)
 
 # we need to make sure that there is a directory we can put the tar file in
