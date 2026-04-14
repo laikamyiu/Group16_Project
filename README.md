@@ -1,7 +1,6 @@
 # Group16_Project
 CSE 411 Project #1
 
-
 SCRIPT 1 (system security audit script):
 
 Description: 
@@ -20,3 +19,11 @@ Each check is essential when it comes to auditing a system. The current logged-i
 
 Cron job/Automation:
 In order to run the script automatically, we can utilize cron jobs. In order to setup the cron job, open up the cron tab editor using “crontab -e”. Once you have a script tab open, add a line such as mine “0 9 * * * /home/jkwok/system_report/system_audit.sh”. My script is located in a directory, so therefore you will need to adjust your path to where your script is located. This above script runs the script automatically everyday at 9am.
+
+
+SCRIPT 2 (Backup and Recovery Script):
+Description:
+The backup.sh script takes two variables. The first variable will be the target (the path of the directory we would like to backup) the second variable will be the backup (the path of where we would place the backup). The script will take the first variable and use that to locate the directory that needs to be backedup. It will then create a tar.gz file and move it to the path of the second variable and put the file there. If the backup directory was not made, it would be made when the script is run automatically. The script will also delete all backups that were made more than 3 days ago.
+
+How to run each script:
+To run the script, we will have to be in the directory the script is in, use the command sudo bash backup.sh {path of directory you would like to take a backup} {path of where you would like the backup to be}. After hitting enter, you are done. To double check we would then go into the directory of the backup and see that the file is there.
