@@ -32,10 +32,6 @@ To run the script, we will have to be in the directory the script is in, use the
 
 SCRIPT 3 (Log Monitoring and Script Health):
 
-
-Description of Each Script
-
-
 monitor.sh
 
 This script monitors system logs and system health on an Ubuntu Server system. It checks the system log file (/var/log/syslog) and searches for the keywords "failed" and "error" using the grep command. The matching log entries are written into a report file named monitor_report.txt.
@@ -48,13 +44,13 @@ All results, including log entries, disk usage status, and CPU usage status, are
 
 
 
-How to Run the Script
+How to Run the Script:
 
 
-1. Open terminal and navigate to the directory containing the script.
+1. Open UTM and navigate to the directory that has the script.
 
 2. Make the script executable:
-   chmod +x monitor.sh
+   chmod 744 monitor.sh
 
 3. Run the script:
    ./monitor.sh
@@ -63,8 +59,7 @@ How to Run the Script
    cat monitor_report.txt
 
 
-Dependencies
-
+Dependencies:
 
 This script uses standard Linux commands:
 - grep
@@ -75,8 +70,7 @@ This script uses standard Linux commands:
 
 No additional installations are required on Ubuntu Server.
 
-
-Sample Output
+Sample Output:
 
 
 System Monitoring Report
